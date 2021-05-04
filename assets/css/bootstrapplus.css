@@ -1,0 +1,12 @@
+#brandlogo:hover {
+  filter: opacity(0.5) drop-shadow(0 0 0 rgb(67, 180, 255));
+  cursor: pointer;
+}
+
+a {
+  color: #5588a3;
+}
+
+a:hover {
+  color: #a8c3d2;
+}
