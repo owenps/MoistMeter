@@ -6,14 +6,25 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" href="assets/images/logo.png">
    <title>Moist Meter</title>
-   <!-- Stylesheets -->
+<!-- Stylesheets -->
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
    <link rel="stylesheet" href="assets/css/oceanbackground.css">
    <link rel="stylesheet" href="assets/css/bootstrapplus.css">
 </head>
 <body>
-   <!-- Ocean Background -->
+<!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://owensmith.page/MoistMeter/">
+         <img id="brandlogo" src="assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      </a>
+      <form class="form-inline">
+         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+   </nav>
+<!-- Content -->
    <div class="ocean">
+   <!-- Ocean Bubbles -->
       <div class="bubble bubble--1"></div>
       <div class="bubble bubble--2"></div>
       <div class="bubble bubble--3"></div>
@@ -27,131 +38,97 @@
       <div class="bubble bubble--11"></div>
       <div class="bubble bubble--12"></div>
    
-   <!-- Navigation Bar -->
-   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-      <a class="navbar-brand" href="https://owensmith.page/MoistMeter/">
-         <img id="brandlogo" src="assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      </a>
-      <form class="form-inline">
-         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-   </nav>
-
    <!-- Jumbo Container -->
-   <div class="container my-5">
-      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center">
-         <div class="jumbotron shadow-lg">
+      <div class="container my-5">
+         <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center">
+            <div class="jumbotron shadow-lg">
             <!-- Hero Title -->
-            <div class="text-center">
-               <h1 class="display-3">MOIST METER</h1>
-               <p class="lead">
-                  The Moist Meter is an experimental measurement system that you can use to safely gauge just how moist a video game or movie is going to be before playing it or viewing it. Avoid the dry products and only use the wettest. <br/> 
-                  created by <a href="https://twitter.com/moistcr1tikal" target="_blank">@moistcr1tikal</a>, <a href="https://twitter.com/zealotonpc" target="_blank">@zealotonpc</a>
-               </p>
-            </div>
-            <br>
+               <div class="text-center">
+                  <h1 class="display-3">MOIST METER</h1>
+                  <p class="lead">
+                     The Moist Meter is an experimental measurement system that you can use to safely gauge just how moist a video game or movie is going to be before playing it or viewing it. Avoid the dry products and only use the wettest. <br/> 
+                     created by <a href="https://twitter.com/moistcr1tikal" target="_blank">@moistcr1tikal</a>, <a href="https://twitter.com/zealotonpc" target="_blank">@zealotonpc</a>
+                  </p>
+               </div>
+               <br>
             <!-- Tabs Navigation -->
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-               <li class="nav-item" role="presentation">
-                 <a class="nav-link active" id="vg-tab" data-bs-toggle="tab" data-bs-target="#vg" type="button" role="tab" aria-controls="home" aria-selected="true">Video Games</a>
-               </li>
-               <li class="nav-item" role="presentation">
-                  <a class="nav-link" id="movie-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button" role="tab" aria-controls="home" aria-selected="true">Movies</a>
-                </li>
-               <li class="nav-item" role="presentation">
-                 <a class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab" aria-controls="profile" aria-selected="false">TV Shows</a>
-               </li>
-               <li class="nav-item" role="presentation">
-                 <a class="nav-link" id="anime-tab" data-bs-toggle="tab" data-bs-target="#anime" type="button" role="tab" aria-controls="contact" aria-selected="false">Anime</a>
-               </li>
-             </ul>
-             <!-- Tabs Content -->
-             <div class="tab-content" id="myTabContent">
-               <div class="tab-pane fade show active" id="vg" role="tabpanel" aria-labelledby="vg-tab"><table class="table table-hover">
-                  <tbody>
-                     <tr>
-                        <td>Picture</td>
-                        <td>title</td>
-                        <td>score</td>
-                     </tr>
-                     <tr>
-                        <td>Picture</td>
-                        <td>title</td>
-                        <td>score</td>
-                     </tr>
-                     <tr>
-                        <td>Picture</td>
-                        <td>title</td>
-                        <td>score</td>
-                     </tr>
-                     <tr>
-                        <td>Picture</td>
-                        <td>title</td>
-                        <td>score</td>
-                     </tr>
-                  </tbody>
-                </table></div>
-               <div class="tab-pane fade" id="movie" role="tabpanel" aria-labelledby="movie-tab"><table class="table table-hover">
-                  <tbody>
-                     
-                  </tbody>
-                </table></div>
-               <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab"><table class="table table-hover">
-                  <tbody>
-                     
-                  </tbody>
-                </table></div>
-               <div class="tab-pane fade" id="anime" role="tabpanel" aria-labelledby="anime-tab"><table class="table table-hover">
-                  <tbody>
-                     
-                  </tbody>
-                </table></div>
-             </div>
-
-          </div>
-      </div>
-    </div>
-
-    <footer class="footer mt-auto py-3">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm">
-               <h3>Support &#128150</h3>
-               <p>
-                  The best way to support this project is to &#11088 the repository on 
-                  <a href="https://github.com/owenps/MoistMeter" target="_blank">GitHub</a>. 
-                  It lets me know that people wish for this site to stay up to date and encourages future improvements.
-               </p>
-            </div>
-            <div class="col-sm">
-               <h3>Feedback & Suggestions &#128172</h3>
-               <p>
-                  If you have any feedback or suggestions you can leave an issue/request under the issues tab on 
-                  <a href="https://github.com/owenps/MoistMeter" target="_blank">GitHub</a>.
-               </p>
+               <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link active" id="vg-tab" data-bs-toggle="tab" data-bs-target="#vg" type="button" role="tab" aria-controls="home" aria-selected="true">Video Games</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link" id="movie-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button" role="tab" aria-controls="home" aria-selected="true">Movies</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab" aria-controls="profile" aria-selected="false">TV Shows</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                     <a class="nav-link" id="anime-tab" data-bs-toggle="tab" data-bs-target="#anime" type="button" role="tab" aria-controls="contact" aria-selected="false">Anime</a>
+                  </li>
+               </ul>
+            <!-- Tabs Content -->
+               <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="vg" role="tabpanel" aria-labelledby="vg-tab"><table class="table table-hover">
+                     <tbody>
+                        <tr>
+                           <td>Picture</td>
+                           <td>title</td>
+                           <td>score</td>
+                        </tr>
+                     </tbody>
+                  </table></div>
+                  <div class="tab-pane fade" id="movie" role="tabpanel" aria-labelledby="movie-tab"><table class="table table-hover">
+                     <tbody></tbody>
+                  </table></div>
+                  <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab"><table class="table table-hover">
+                     <tbody></tbody>
+                  </table></div>
+                  <div class="tab-pane fade" id="anime" role="tabpanel" aria-labelledby="anime-tab"><table class="table table-hover">
+                     <tbody></tbody>
+                  </table></div>
+               </div>
             </div>
          </div>
-       </div> 
-       <br> 
-      <div class="container">
-         <span>
-            <p class="copyright">&copy; Owen Smith. 2021. | <a href="https://github.com/owenps/MoistMeter" target="_blank">Source Code</a></p>
-         </span>
       </div>
-    </footer>
-    
+      <footer class="footer mt-auto py-3">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm">
+                  <h3>Support &#128150</h3>
+                  <p>
+                     The best way to support this project is to &#11088 the repository on 
+                     <a href="https://github.com/owenps/MoistMeter" target="_blank">GitHub</a>. 
+                     It lets me know that people wish for this site to stay up to date and encourages future improvements.
+                  </p>
+               </div>
+               <div class="col-sm">
+                  <h3>Feedback & Suggestions &#128172</h3>
+                  <p>
+                     If you have any feedback or suggestions you can leave an issue/request under the issues tab on 
+                     <a href="https://github.com/owenps/MoistMeter" target="_blank">GitHub</a>.
+                  </p>
+               </div>
+            </div>
+         </div> 
+         <br> 
+         <div class="container">
+            <span>
+               <p class="copyright">&copy; Owen Smith. 2021. | <a href="https://github.com/owenps/MoistMeter" target="_blank">Source Code</a></p>
+            </span>
+         </div>
+      </footer>
+   </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
    <script src="assets/js/bootstrap.min.js"></script>
 
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
    
-   <!-- Realtime Database SDK -->
+<!-- Realtime Database SDK -->
    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
    
-   <!-- Initalize connection to Firebase -->
+<!-- Initalize connection to Firebase -->
    <script src="assets/js/firebase.js"></script>
 
 </body>
