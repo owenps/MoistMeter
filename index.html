@@ -29,7 +29,7 @@
    
    <!-- Navigation Bar -->
    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="https://owensmith.page/MoistMeter/">
          <img id="brandlogo" src="assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       </a>
       <form class="form-inline">
@@ -51,7 +51,7 @@
                </p>
             </div>
             <br>
-            <!-- Tabs -->
+            <!-- Tabs Navigation -->
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                <li class="nav-item" role="presentation">
                  <a class="nav-link active" id="vg-tab" data-bs-toggle="tab" data-bs-target="#vg" type="button" role="tab" aria-controls="home" aria-selected="true">Video Games</a>
@@ -66,11 +66,47 @@
                  <a class="nav-link" id="anime-tab" data-bs-toggle="tab" data-bs-target="#anime" type="button" role="tab" aria-controls="contact" aria-selected="false">Anime</a>
                </li>
              </ul>
+             <!-- Tabs Content -->
              <div class="tab-content" id="myTabContent">
-               <div class="tab-pane fade show active" id="vg" role="tabpanel" aria-labelledby="vg-tab">VG</div>
-               <div class="tab-pane fade" id="movie" role="tabpanel" aria-labelledby="movie-tab">MOVIES</div>
-               <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab">TV</div>
-               <div class="tab-pane fade" id="anime" role="tabpanel" aria-labelledby="anime-tab">ANIME</div>
+               <div class="tab-pane fade show active" id="vg" role="tabpanel" aria-labelledby="vg-tab"><table class="table table-hover">
+                  <tbody>
+                     <tr>
+                        <td>Picture</td>
+                        <td>title</td>
+                        <td>score</td>
+                     </tr>
+                     <tr>
+                        <td>Picture</td>
+                        <td>title</td>
+                        <td>score</td>
+                     </tr>
+                     <tr>
+                        <td>Picture</td>
+                        <td>title</td>
+                        <td>score</td>
+                     </tr>
+                     <tr>
+                        <td>Picture</td>
+                        <td>title</td>
+                        <td>score</td>
+                     </tr>
+                  </tbody>
+                </table></div>
+               <div class="tab-pane fade" id="movie" role="tabpanel" aria-labelledby="movie-tab"><table class="table table-hover">
+                  <tbody>
+                     
+                  </tbody>
+                </table></div>
+               <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab"><table class="table table-hover">
+                  <tbody>
+                     
+                  </tbody>
+                </table></div>
+               <div class="tab-pane fade" id="anime" role="tabpanel" aria-labelledby="anime-tab"><table class="table table-hover">
+                  <tbody>
+                     
+                  </tbody>
+                </table></div>
              </div>
 
           </div>
@@ -111,27 +147,12 @@
 
    <!-- The core Firebase JS SDK is always required and must be listed first -->
    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+   
+   <!-- Realtime Database SDK -->
+   <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+   
+   <!-- Initalize connection to Firebase -->
+   <script src="assets/js/firebase.js"></script>
 
-   <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-   <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
-
-   <script>
-     // Your web app's Firebase configuration
-   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-   var firebaseConfig = {
-      apiKey: "AIzaSyCM1jzibvUKitjTnaLjmZ0Ter34yIVshis",
-      authDomain: "moistmeter-0.firebaseapp.com",
-      databaseURL: "https://moistmeter-0-default-rtdb.firebaseio.com",
-      projectId: "moistmeter-0",
-      storageBucket: "moistmeter-0.appspot.com",
-      messagingSenderId: "229267372019",
-      appId: "1:229267372019:web:974584b06a03c3e5058486",
-      measurementId: "G-ZVNLZBW869"
-   };
-   // Initialize Firebase
-   firebase.initializeApp(firebaseConfig);
-   firebase.analytics();
-   </script>
 </body>
 </html>
