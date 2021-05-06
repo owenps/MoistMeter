@@ -14,6 +14,6 @@ A website dedicated to the Moist Meter series on YouTube by [@moistcr1tikal](htt
 
 ## Non-Essential To-do
 
-- [ ] Sort by recent/ranking
+- [x] Sort by recent/ranking
 - [ ] Search bar
 - [ ] Award flairs
