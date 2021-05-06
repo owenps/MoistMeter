@@ -51,26 +51,61 @@
                </div>
                <br>
             <!-- Tabs Navigation -->
-               <ul class="nav nav-tabs" id="myTab" role="tablist">
+               <ul class="nav nav-tabs" id="category-tab" role="tablist">
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link active" id="vg-tab" data-bs-toggle="tab" data-bs-target="#vg" type="button" role="tab" aria-controls="home" aria-selected="true">Video Games</a>
+                     <a class="nav-link active" id="vg-tab" data-bs-toggle="tab" data-bs-target="#vg" type="button" role="tab">Video Games</a>
                   </li>
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link" id="movie-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button" role="tab" aria-controls="home" aria-selected="true">Movies</a>
+                     <a class="nav-link" id="movie-tab" data-bs-toggle="tab" data-bs-target="#movie" type="button" role="tab">Movies</a>
                   </li>
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab" aria-controls="profile" aria-selected="false">TV Shows</a>
+                     <a class="nav-link" id="tv-tab" data-bs-toggle="tab" data-bs-target="#tv" type="button" role="tab">TV Shows</a>
                   </li>
                   <li class="nav-item" role="presentation">
-                     <a class="nav-link" id="anime-tab" data-bs-toggle="tab" data-bs-target="#anime" type="button" role="tab" aria-controls="contact" aria-selected="false">Anime</a>
+                     <a class="nav-link" id="anime-tab" data-bs-toggle="tab" data-bs-target="#anime" type="button" role="tab">Anime</a>
                   </li>
                </ul>
             <!-- Tabs Content -->
                <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="vg" role="tabpanel" aria-labelledby="vg-tab"><table id="vgTable" class="table table-hover"></table></div>
-                  <div class="tab-pane fade" id="movie" role="tabpanel" aria-labelledby="movie-tab"><table id="movieTable" class="table table-hover"></table></div>
-                  <div class="tab-pane fade" id="tv" role="tabpanel" aria-labelledby="tv-tab"><table id="tvTable" class="table table-hover"></table></div>
-                  <div class="tab-pane fade" id="anime" role="tabpanel" aria-labelledby="anime-tab"><table id="animeTable" class="table table-hover"></table></div>
+               <!-- Video Game Tabs -->
+                  <div class="tab-pane fade show active" id="vg" role="tabpanel">
+                  <!-- Sort Buttons --> 
+                     <button type="button" class="btn btn-primary" id="vg-recent">Recent</button>
+                     <button type="button" class="btn btn-primary" id="vg-oldest">Oldest</button>
+                     <button type="button" class="btn btn-primary" id="vg-high">Highest Rated</button>
+                     <button type="button" class="btn btn-primary" id="vg-low">Lowest Rated</button>
+                  <!-- Content Table -->
+                     <table id="vgTable" class="table table-hover"></table></div>
+               
+               <!-- Movie Tabs -->   
+                  <div class="tab-pane fade" id="movie" role="tabpanel">
+                  <!-- Sort Buttons --> 
+                     <button type="button" class="btn btn-primary" id="movie-recent">Recent</button>
+                     <button type="button" class="btn btn-primary" id="movie-oldest">Oldest</button>
+                     <button type="button" class="btn btn-primary" id="movie-high">Highest Rated</button>
+                     <button type="button" class="btn btn-primary" id="movie-low">Lowest Rated</button>
+                  <!-- Content Table -->
+                     <table id="movieTable" class="table table-hover"></table></div>
+
+               <!-- TV Show Tabs -->
+                  <div class="tab-pane fade" id="tv" role="tabpanel">
+                  <!-- Sort Buttons --> 
+                     <button type="button" class="btn btn-primary" id="tv-recent">Recent</button>
+                     <button type="button" class="btn btn-primary" id="tv-oldest">Oldest</button>
+                     <button type="button" class="btn btn-primary" id="tv-high">Highest Rated</button>
+                     <button type="button" class="btn btn-primary" id="tv-low">Lowest Rated</button>
+                  <!-- Content Table -->
+                     <table id="tvTable" class="table table-hover"></table></div>
+
+               <!-- Anime Tabs -->
+                  <div class="tab-pane fade" id="anime" role="tabpanel">
+                  <!-- Sort Buttons --> 
+                     <button type="button" class="btn btn-primary" id="anime-recent">Recent</button>
+                     <button type="button" class="btn btn-primary" id="anime-oldest">Oldest</button>
+                     <button type="button" class="btn btn-primary" id="anime-high">Highest Rated</button>
+                     <button type="button" class="btn btn-primary" id="anime-low">Lowest Rated</button>
+                  <!-- Content Table -->
+                     <table id="animeTable" class="table table-hover"></table></div>
                </div>
             </div>
          </div>

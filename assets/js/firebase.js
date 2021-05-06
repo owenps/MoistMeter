@@ -38,6 +38,10 @@ var allMovies = [];
 var allTVShows = [];
 var allAnime = [];
 
+function clearTable(table){
+   table.innerHTML = "";
+}
+
 function fillTable(table,arr) {
    for (var item in arr){
       var row = table.insertRow();
@@ -65,6 +69,37 @@ function fillTable(table,arr) {
       scoreCell.innerHTML = "<h1>" + arr[item]["score"] + "<h1>";
    }
 }
+// Returns 1 if order should be switched (least to greatest) and -1 otherwise
+function compareDate(obj1,obj2){
+   let d1 = obj1["date"];
+   let d2 = obj2["date"];
+
+   // Date is of the form dd/mm/year
+   let d1Day = parseInt(d1.substring(0,2));
+   let d1Month = parseInt(d1.substring(3,5));
+   let d1Year = parseInt(d1.substring(6,10));
+
+   let d2Day = parseInt(d2.substring(0,2));
+   let d2Month = parseInt(d2.substring(3,5));   
+   let d2Year = parseInt(d2.substring(6,10));
+
+   if (d1Year != d2Year){
+      if (d1Year > d2Year){return 1;}
+      else{return -1;}
+   }else if (d1Month != d2Month){
+      if (d1Month > d2Month){return 1;}
+      else{return -1;}
+   }else{
+      if (d1Day > d2Day){return 1;}
+      else{return -1;}
+   }
+}
+
+function compareScore(obj1,obj2){
+   if (obj1["score"] > obj2["score"]){ return 1; }
+   else if (obj1["score"] < obj2["score"]) { return -1; }
+   else { return compareDate(obj1,obj2); } // break ties with most recent 
+}
 
 dbRef.get().then((snapshot) => {
    for (var key in snapshot.val()){
@@ -78,11 +113,120 @@ dbRef.get().then((snapshot) => {
       }else if (item["category"] === 'anime'){
          allAnime.push(item);
       }else{
-         console.log("No Category Found");
+         //console.log("No Category Found: "+item["title"]);
       }
    }
-   fillTable(document.getElementById("vgTable"),allVideoGames);
-   fillTable(document.getElementById("movieTable"),allMovies);
-   fillTable(document.getElementById("tvTable"),allTVShows);
-   fillTable(document.getElementById("animeTable"),allAnime);
+
+   // Video Games Arrays
+   var allVideoGamesOldest = [...allVideoGames].sort(compareDate);
+   var allVideoGamesRecent = [...allVideoGamesOldest].reverse();
+   var allVideoGamesLow = [...allVideoGames].sort(compareScore);
+   var allVideoGamesHigh = [...allVideoGamesLow].reverse();
+
+   // Movies Arrays
+   var allMoviesOldest = [...allMovies].sort(compareDate);
+   var allMoviesRecent = [...allMoviesOldest].reverse();
+   var allMoviesLow = [...allMovies].sort(compareScore);
+   var allMoviesHigh = [...allMoviesLow].reverse();
+
+   // TV Arrays
+   var allTVShowsOldest = [...allTVShows].sort(compareDate);
+   var allTVShowsRecent = [...allTVShowsOldest].reverse();
+   var allTVShowsLow = [...allTVShows].sort(compareScore);
+   var allTVShowsHigh = [...allTVShowsLow].reverse();
+
+   // Anime Arrays
+   var allAnimeOldest = [...allAnime].sort(compareDate);
+   var allAnimeRecent = [...allAnimeOldest].reverse();
+   var allAnimeLow = [...allAnime].sort(compareScore);
+   var allAnimeHigh = [...allAnimeLow].reverse();
+
+   fillTable(document.getElementById("vgTable"),allVideoGamesRecent);
+   fillTable(document.getElementById("movieTable"),allMoviesRecent);
+   fillTable(document.getElementById("tvTable"),allTVShowsRecent);
+   fillTable(document.getElementById("animeTable"),allAnimeRecent);
+
+   // Video Game Listeners
+   document.getElementById("vg-recent").addEventListener("click",function(){
+      clearTable(document.getElementById("vgTable"));
+      fillTable(document.getElementById("vgTable"),allVideoGamesRecent);
+   });
+
+   document.getElementById("vg-oldest").addEventListener("click",function(){
+      clearTable(document.getElementById("vgTable"));
+      fillTable(document.getElementById("vgTable"),allVideoGamesOldest);
+   });
+
+   document.getElementById("vg-high").addEventListener("click",function(){
+      clearTable(document.getElementById("vgTable"));
+      fillTable(document.getElementById("vgTable"),allVideoGamesHigh);
+   });
+
+   document.getElementById("vg-low").addEventListener("click",function(){
+      clearTable(document.getElementById("vgTable"));
+      fillTable(document.getElementById("vgTable"),allVideoGamesLow);
+   });
+
+   // Movie Listeners
+   document.getElementById("movie-recent").addEventListener("click",function(){
+      clearTable(document.getElementById("movieTable"));
+      fillTable(document.getElementById("movieTable"),allMoviesRecent);
+   });
+
+   document.getElementById("movie-oldest").addEventListener("click",function(){
+      clearTable(document.getElementById("movieTable"));
+      fillTable(document.getElementById("movieTable"),allMoviesOldest);
+   });
+
+   document.getElementById("movie-high").addEventListener("click",function(){
+      clearTable(document.getElementById("movieTable"));
+      fillTable(document.getElementById("movieTable"),allMoviesHigh);
+   });
+
+   document.getElementById("movie-low").addEventListener("click",function(){
+      clearTable(document.getElementById("movieTable"));
+      fillTable(document.getElementById("movieTable"),allMoviesLow);
+   });
+
+   // TV Shows Listeners
+   document.getElementById("tv-recent").addEventListener("click",function(){
+      clearTable(document.getElementById("tvTable"));
+      fillTable(document.getElementById("tvTable"),allTVShowsRecent);
+   });
+
+   document.getElementById("tv-oldest").addEventListener("click",function(){
+      clearTable(document.getElementById("tvTable"));
+      fillTable(document.getElementById("tvTable"),allTVShowsOldest);
+   });
+
+   document.getElementById("tv-high").addEventListener("click",function(){
+      clearTable(document.getElementById("tvTable"));
+      fillTable(document.getElementById("tvTable"),allTVShowsHigh);
+   });
+
+   document.getElementById("tv-low").addEventListener("click",function(){
+      clearTable(document.getElementById("tvTable"));
+      fillTable(document.getElementById("tvTable"),allTVShowsLow);
+   });
+
+   // Anime Listeners
+   document.getElementById("anime-recent").addEventListener("click",function(){
+      clearTable(document.getElementById("animeTable"));
+      fillTable(document.getElementById("animeTable"),allAnimeRecent);
+   });
+
+   document.getElementById("anime-oldest").addEventListener("click",function(){
+      clearTable(document.getElementById("animeTable"));
+      fillTable(document.getElementById("animeTable"),allAnimeOldest);
+   });
+
+   document.getElementById("anime-high").addEventListener("click",function(){
+      clearTable(document.getElementById("animeTable"));
+      fillTable(document.getElementById("animeTable"),allAnimeHigh);
+   });
+
+   document.getElementById("anime-low").addEventListener("click",function(){
+      clearTable(document.getElementById("animeTable"));
+      fillTable(document.getElementById("animeTable"),allAnimeLow);
+   });
 });

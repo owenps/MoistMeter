@@ -10,7 +10,7 @@ A website dedicated to the Moist Meter series on YouTube by [@moistcr1tikal](htt
 - [x] Sync Firebase db to project
 - [x] Add tab views
 - [x] Display results from db
-- [ ] Add storage and collect images (locally)
+- [x] Add storage and collect images (locally)
 
 ## Non-Essential To-do
 
