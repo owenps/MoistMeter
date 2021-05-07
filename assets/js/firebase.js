@@ -37,6 +37,16 @@ var allVideoGames = [];
 var allMovies = [];
 var allTVShows = [];
 var allAnime = [];
+var allMedia = [];
+
+document.getElementById("searchSubmit").addEventListener("click",function(){
+   //document.getElementById("resultsModal").modal("show");
+   $("#resultsModal").modal("show");
+})
+
+document.getElementById("modalClose").addEventListener("click",function(){
+   $("#resultsModal").modal("hide");
+})
 
 function clearTable(table){
    table.innerHTML = "";
@@ -115,6 +125,7 @@ dbRef.get().then((snapshot) => {
       }else{
          //console.log("No Category Found: "+item["title"]);
       }
+      allMedia.push(item);
    }
 
    // Video Games Arrays
@@ -228,5 +239,31 @@ dbRef.get().then((snapshot) => {
    document.getElementById("anime-low").addEventListener("click",function(){
       clearTable(document.getElementById("animeTable"));
       fillTable(document.getElementById("animeTable"),allAnimeLow);
+   });
+
+
+   // Search Function
+   document.getElementById("searchbar").addEventListener("input",function(e){
+      let val = e.target.value.toLowerCase();
+      if (val.trim().length > 1){
+         // Check database
+         var results = []
+         for (var key in allMedia){
+            let item = allMedia[key];
+            if (item["title"].toLowerCase() === val){
+               // Exact results go first
+               results.unshift(item);
+            } else if (item["title"].toLowerCase().includes(val)){
+               // Add to results
+               results.push(item)
+            }
+            if (results.length >= 5){ break; } // limit of 5 search results
+         }
+         // Display results
+         clearTable(document.getElementById("resultsTable"));
+         fillTable(document.getElementById("resultsTable"),results);
+      }else{
+         clearTable(document.getElementById("resultsTable"));
+      }
    });
 });
