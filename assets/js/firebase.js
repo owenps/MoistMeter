@@ -41,12 +41,12 @@ var allMedia = [];
 
 document.getElementById("searchSubmit").addEventListener("click",function(){
    //document.getElementById("resultsModal").modal("show");
-   $("#resultsModal").modal("toggle");
+   $("#resultsModal").modal("show");
 })
 
-document.getElementById("modalClose").addEventListener("click",function(){
-   $("#resultsModal").modal("toggle");
-})
+//document.getElementById("modalClose").addEventListener("click",function(){
+//   $("#resultsModal").modal("close");
+//})
 
 function clearTable(table){
    table.innerHTML = "";
