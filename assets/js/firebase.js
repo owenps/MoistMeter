@@ -16,37 +16,11 @@ firebase.initializeApp(firebaseConfig);
 // Read Database
 const dbRef = firebase.database().ref();
 
-/*
-dbRef.child("It Takes Two").child("score").get().then((snapshot) => {
-   if (snapshot.exists()){
-      console.log(snapshot.val());
-   } else {
-      console.log("No data available");
-   }
-}).catch((error) => {
-   console.error(error);
-});
-   
-dbRef.child("It Takes Two").get().then((snapshot) => {
-   for (var key in snapshot.val()){
-      console.log(snapshot.val()[key]);
-   }
-});
-*/
 var allVideoGames = [];
 var allMovies = [];
 var allTVShows = [];
 var allAnime = [];
 var allMedia = [];
-
-//document.getElementById("searchSubmit").addEventListener("click",function(){
-   //document.getElementById("resultsModal").modal("show");
-//   $("#resultsModal").modal("show");
-//})
-
-//document.getElementById("modalClose").addEventListener("click",function(){
-//   $("#resultsModal").modal("close");
-//})
 
 function clearTable(table){
    table.innerHTML = "";
