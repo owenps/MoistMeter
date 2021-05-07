@@ -64,9 +64,9 @@ function fillTable(table,arr) {
          if (ind != -1){
             altTitle = altTitle.substring(0,ind);
          }
-         pictureCell.innerHTML = '<img src="./assets/images/'+altTitle+'.jpg" width="130" height="200">';
+         pictureCell.innerHTML = '<a href="'+arr[item]["link"]+'" target="_blank"><img src="./assets/images/'+altTitle+'.jpg" width="130" height="200"></a>';
       }else{
-         pictureCell.innerHTML = '<img src="./assets/images/'+arr[item]["title"]+'.jpg" width="130" height="200">';
+         pictureCell.innerHTML = '<a href="'+arr[item]["link"]+'" target="_blank"><img src="./assets/images/'+arr[item]["title"]+'.jpg" width="130" height="200"></a>';
       }
       
 
