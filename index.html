@@ -20,8 +20,9 @@
       </a>
       <form class="form-inline">
          <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchbar" aria-label="Search">
-         <button class="btn btn-secondary my-2 my-sm-0" id="searchSubmit" data-bs-toggle="modal" data-bs-target="#resultsModal">Search</button>
+         <!-- <button class="btn btn-secondary my-2 my-sm-0" id="searchSubmit" data-bs-toggle="modal" data-bs-target="#resultsModal">Search</button> -->
       </form>
+      <button class="btn btn-secondary my-2 my-sm-0" id="searchSubmit" data-bs-toggle="modal" data-bs-target="#resultsModal">Search</button>
    </nav>
 
 <!-- Modal -->
@@ -30,7 +31,8 @@
          <div class="modal-content">
             <div class="modal-header">
                <h5 class="modal-title">Search Results</h5>
-               <button type="button" class="close" data-bs-dismiss="modal" id="modalClose">
+               <!-- <button type="button" class="close" id="modalClose"></button> -->
+               <button type="button" class="close" data-bs-dismiss="modal" id="modalClose"> 
                   <span aria-hidden="true">&times;</span>
                </button>
             </div>
@@ -159,8 +161,9 @@
       </footer>
    </div>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
    <script src="assets/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
