@@ -41,11 +41,11 @@ var allMedia = [];
 
 document.getElementById("searchSubmit").addEventListener("click",function(){
    //document.getElementById("resultsModal").modal("show");
-   $("#resultsModal").modal("show");
+   $("#resultsModal").modal("toggle");
 })
 
 document.getElementById("modalClose").addEventListener("click",function(){
-   $("#resultsModal").modal("hide");
+   $("#resultsModal").modal("toggle");
 })
 
 function clearTable(table){
