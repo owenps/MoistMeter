@@ -6,5 +6,5 @@ A website dedicated to the Moist Meter series on YouTube by [@moistcr1tikal](htt
 
 ## Current Issues
 
-- [] Mobile portrait view
-- [] Mobile modal doesn't show
+- [ ] Mobile portrait view
+- [ ] Mobile modal doesn't show
