@@ -12,22 +12,6 @@
    <link rel="stylesheet" href="assets/css/bootstrapplus.css">
 </head>
 <body>
-<!-- Modal -->
-<div class="modal fade" id="resultsModal" tabindex="-1" role="dialog">
-   <div class="modal-dialog" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title">Search Results</h5>
-         <button type="button" class="close" id="modalClose">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
-         <table id="resultsTable" class="table table-hover"></table>
-       </div>
-     </div>
-   </div>
- </div>
 
 <!-- Navigation Bar -->
    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -36,10 +20,27 @@
       </a>
       <form class="form-inline">
          <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchbar" aria-label="Search">
-         <button class="btn btn-secondary my-2 my-sm-0" id="searchSubmit" type="submit">Search</button>
+         <button class="btn btn-secondary my-2 my-sm-0" id="searchSubmit" data-bs-toggle="modal" data-bs-target="#resultsModal">Search</button>
       </form>
    </nav>
-   
+
+<!-- Modal -->
+   <div class="modal fade" id="resultsModal" role="dialog">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Search Results</h5>
+               <button type="button" class="close" data-bs-dismiss="modal" id="modalClose">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <table id="resultsTable" class="table table-hover"></table>
+            </div>
+         </div>
+      </div>
+   </div>   
+
 <!-- Content -->
    <div class="ocean">
    <!-- Ocean Bubbles -->
