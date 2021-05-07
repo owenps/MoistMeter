@@ -28,7 +28,7 @@
     opacity: 0.06;
   }
   100% {
-    transform: translateY(-120vh);
+    transform: translateY(-400vh);
   }
 }
 
@@ -97,6 +97,15 @@
   width: 15px;
   height: 15px;
   left: 90%;
+  animation-delay: -2s;
+  animation-duration: 25s;
+  opacity: 0.3;
+}
+
+.bubble--8 {
+  width: 15px;
+  height: 15px;
+  left: 90%;
   animation-delay: -7s;
   animation-duration: 25s;
   opacity: 0.3;
@@ -132,7 +141,7 @@
   opacity: 0.3;
 }
 
-.bubble--11 {
+.bubble--12 {
   width: 25px;
   height: 25px;
   left: 90%;
